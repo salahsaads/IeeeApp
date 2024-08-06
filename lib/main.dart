@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:device_preview/device_preview.dart';
 import 'package:ieee/Features/Nav/presntation/view/Nav.dart';
+import 'package:ieee/Features/splash/splashscreen.dart';
 
 import 'Features/Department/presnation/view/Department_Screen.dart';
 
