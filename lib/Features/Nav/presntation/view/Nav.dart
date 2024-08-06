@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ieee/Features/about/aboutScreen.dart';
 import 'package:ieee/core/AppColor/appcolor.dart';
 
 import 'widget/Nav_Widget.dart';
@@ -102,7 +103,7 @@ class _NavState extends State<Nav> {
         },
         children: [
           Center(child: Text('Screen1')),
-          Center(child: Text('Screen2')),
+          AboutScreen(),
           Center(child: Text('Screen3'))
         ],
       ),
