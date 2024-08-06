@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:ieee/Features/about/aboutScreen.dart';
+import 'package:ieee/Features/about/presntation/view/aboutScreen.dart';
 import 'package:ieee/core/AppColor/appcolor.dart';
 
 import 'widget/Nav_Widget.dart';
@@ -25,6 +24,18 @@ class _NavState extends State<Nav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.Color1,
+      appBar: AppBar(
+        backgroundColor: AppColor.mainColor1,
+        title: Container(
+            width: 71,
+            height: 40,
+            child: const Image(
+              image: AssetImage("assets/images/logoieee.png"),
+              fit: BoxFit.cover,
+            )),
+        centerTitle: true,
+      ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(left: 18, right: 18, bottom: 18),
         child: Container(
@@ -37,19 +48,19 @@ class _NavState extends State<Nav> {
                 colors: [
                   AppColor.mainColor1,
                   AppColor.mainColor1,
-                  Color(0xff002235)
+                  const Color(0xff002235)
                 ],
               ),
               borderRadius: BorderRadius.circular(15)),
           child: Padding(
-            padding: EdgeInsets.only(left: 30, right: 30),
+            padding: const EdgeInsets.only(left: 30, right: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GestureDetector(
                   onTap: () {
                     _pageController.animateToPage(0,
-                        duration: Duration(milliseconds: 300),
+                        duration: const Duration(milliseconds: 300),
                         curve: Curves.easeInOut);
                     setState(() {
                       _currentIndex = 0;
@@ -64,7 +75,7 @@ class _NavState extends State<Nav> {
                 GestureDetector(
                   onTap: () {
                     _pageController.animateToPage(1,
-                        duration: Duration(milliseconds: 300),
+                        duration: const Duration(milliseconds: 300),
                         curve: Curves.easeInOut);
                     setState(() {
                       _currentIndex = 1;
@@ -79,7 +90,7 @@ class _NavState extends State<Nav> {
                 GestureDetector(
                   onTap: () {
                     _pageController.animateToPage(2,
-                        duration: Duration(milliseconds: 300),
+                        duration: const Duration(milliseconds: 300),
                         curve: Curves.easeInOut);
                     setState(() {
                       _currentIndex = 2;
@@ -102,9 +113,9 @@ class _NavState extends State<Nav> {
           changeStateNavBar(index);
         },
         children: [
-          Center(child: Text('Screen1')),
-          AboutScreen(),
-          Center(child: Text('Screen3'))
+          const Center(child: Text('Screen1')),
+          const AboutScreen(),
+          const Center(child: Text('Screen3'))
         ],
       ),
     );
