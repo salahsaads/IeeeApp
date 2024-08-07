@@ -20,6 +20,6 @@ class IEEE extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: DepartmentScreen());
+    return MaterialApp(home: Nav());
   }
 }
