@@ -30,7 +30,7 @@ class IEEE extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: Nav(),
+          home: SplashScreen(),
         );
       },
     );

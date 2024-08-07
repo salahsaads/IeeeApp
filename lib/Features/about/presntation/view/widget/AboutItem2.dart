@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,10 +14,10 @@ class AboutItem1 extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(color: AppColor.Color2, boxShadow: [
         BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            offset: Offset(0, 1),
+            color: Colors.black.withOpacity(0.3),
+            offset: Offset(0, 5),
             blurRadius: 10,
-            spreadRadius: 2)
+            spreadRadius: 0)
       ]),
       child: Padding(
         padding:
@@ -28,8 +27,7 @@ class AboutItem1 extends StatelessWidget {
           maxLines: null,
           overflow: TextOverflow.visible,
           style: GoogleFonts.roboto(
-              textStyle:
-                  TextStyle(fontSize: 15, fontWeight: FontWeight.w400)),
+              textStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.w400)),
         ),
       ),
     );
