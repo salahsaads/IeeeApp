@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ieee/Features/about/presntation/view/aboutScreen.dart';
+import 'package:ieee/Features/home/presntation/view/HomeScreen.dart';
 import 'package:ieee/core/AppColor/appcolor.dart';
 
 import 'widget/Nav_Widget.dart';
@@ -113,7 +114,7 @@ class _NavState extends State<Nav> {
           changeStateNavBar(index);
         },
         children: [
-          const Center(child: Text('Screen1')),
+          const Homescreen(),
           const AboutScreen(),
           const Center(child: Text('Screen3'))
         ],
