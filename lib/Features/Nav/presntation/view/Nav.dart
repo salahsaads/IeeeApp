@@ -43,13 +43,12 @@ class _NavState extends State<Nav> {
           builder: (BuildContext context) {
             return IconButton(
               icon: Container(
-                width: 36,  
-                height: 36, 
+                width: 36,
+                height: 36,
                 child: const Icon(
-                  Icons.menu, 
+                  Icons.menu,
                   color: Colors.white,
                   size: 45,
-                  
                 ),
               ),
               onPressed: () {
@@ -58,7 +57,6 @@ class _NavState extends State<Nav> {
             );
           },
         ),
-      
       ),
       drawer: const CustomDrawer(),
       bottomNavigationBar: Padding(
@@ -137,10 +135,12 @@ class _NavState extends State<Nav> {
         onPageChanged: (index) {
           changeStateNavBar(index);
         },
-        children: const [
-          Homescreen(),
-          AboutScreen(),
-          TeamScreen()
+        children: [
+          const Homescreen(),
+          const AboutScreen(),
+          TeamScreen(
+            title_add: true,
+          )
         ],
       ),
     );

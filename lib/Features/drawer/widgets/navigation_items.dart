@@ -3,15 +3,15 @@
 import 'package:flutter/material.dart';
 
 class NavItems extends StatelessWidget {
-  const NavItems( {
-    Key? key,
-    required this.department,
-  }) : super(key: key);
+  const NavItems({Key? key, required this.department, required this.onTap})
+      : super(key: key);
   final String department;
+  final Function onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        onTap();
         // ظبط دي بردو
       },
       child: Container(

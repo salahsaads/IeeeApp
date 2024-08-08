@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:ieee/team/team_screen.dart';
 import '../../../../core/AppColor/appcolor.dart';
 
 class DepartmentScreen extends StatefulWidget {
@@ -12,24 +12,27 @@ class DepartmentScreen extends StatefulWidget {
 
 class _DepartmentScreenState extends State<DepartmentScreen> {
   int indexSelecting = 0;
-  List<Widget> body = [
-    const Center(
-      child: Text('Body1'),
-    ),
-    const Center(
-      child: Text('Body2'),
-    ),
-    const Center(
-      child: Text('Body3'),
-    )
-  ];
+  PageController _pageController = PageController();
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.Color1,
       appBar: AppBar(
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Colors.white,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
         ),
         backgroundColor: AppColor.mainColor1,
         actions: [
@@ -55,10 +58,20 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
       ),
       body: Stack(
         children: [
-          SingleChildScrollView(
-            child: Column(
-              children: [body[indexSelecting]],
-            ),
+          PageView(
+            controller: _pageController,
+            onPageChanged: (index) {
+              setState(() {
+                indexSelecting = index;
+              });
+            },
+            children: [
+              const Center(child: Text('Body1')),
+              const Center(child: Text('Body2')),
+              TeamScreen(
+                title_add: false,
+              )
+            ],
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20, right: 18, left: 18),
@@ -82,11 +95,9 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        if (indexSelecting != 0) {
-                          setState(() {
-                            indexSelecting = 0;
-                          });
-                        }
+                        _pageController.animateToPage(0,
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.easeInOut);
                       },
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -106,11 +117,9 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        if (indexSelecting != 1) {
-                          setState(() {
-                            indexSelecting = 1;
-                          });
-                        }
+                        _pageController.animateToPage(1,
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.easeInOut);
                       },
                       child: Column(
                         children: [
@@ -129,11 +138,9 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        if (indexSelecting != 2) {
-                          setState(() {
-                            indexSelecting = 2;
-                          });
-                        }
+                        _pageController.animateToPage(2,
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.easeInOut);
                       },
                       child: Column(
                         children: [

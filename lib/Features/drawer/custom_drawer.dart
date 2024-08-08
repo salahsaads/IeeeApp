@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ieee/Features/Department/presnation/view/Department_Screen.dart';
 import 'package:ieee/Features/drawer/widgets/navigation_items.dart';
 import 'package:ieee/Features/drawer/widgets/social_media_icons.dart';
 
@@ -24,10 +25,18 @@ class CustomDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            const NavItems(department: "CS"),
-            const NavItems(department: 'RAS'),
-            const NavItems(department: 'PES'),
-            const NavItems(department: 'MUTEX'),
+            NavItems(
+              department: "CS",
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DepartmentScreen()));
+              },
+            ),
+            NavItems(department: 'RAS', onTap: () {}),
+            NavItems(department: 'PES', onTap: () {}),
+            NavItems(department: 'MUTEX', onTap: () {}),
             const Spacer(
               flex: 9,
             ),
@@ -71,6 +80,22 @@ class CustomDrawer extends StatelessWidget {
                       SocialMediaIcon(iconData: FontAwesomeIcons.twitter),
                     ],
                   ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.copyright_outlined,
+                        size: 15,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        ' Created by CS Chapter of IEEE Du 2024',
+                        style: TextStyle(color: Colors.white, fontSize: 12),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
