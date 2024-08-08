@@ -11,7 +11,7 @@ class AboutBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: [CustomTitle(), AboutItem1(), AboutItem2()],
+      children: [CustomTitle(title: "About US",), AboutItem1(), AboutItem2()],
     );
   }
 }

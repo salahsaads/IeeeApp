@@ -24,9 +24,7 @@ class CustomDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            const NavItems(
-              department: "CS",
-            ),
+            const NavItems(department: "CS"),
             const NavItems(department: 'RAS'),
             const NavItems(department: 'PES'),
             const NavItems(department: 'MUTEX'),
@@ -50,10 +48,9 @@ class CustomDrawer extends StatelessWidget {
                   Text(
                     'info@ieee-zsb.org',
                     style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold
-                    ),
+                        fontSize: 18,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 8),
                   Text(
@@ -69,9 +66,9 @@ class CustomDrawer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SocialMediaIcon(iconData: FontAwesomeIcons.facebook),
-                      SocialMediaIcon(iconData:FontAwesomeIcons.linkedin),
-                      SocialMediaIcon(iconData:FontAwesomeIcons.instagram),
-                      SocialMediaIcon(iconData:FontAwesomeIcons.twitter),
+                      SocialMediaIcon(iconData: FontAwesomeIcons.linkedin),
+                      SocialMediaIcon(iconData: FontAwesomeIcons.instagram),
+                      SocialMediaIcon(iconData: FontAwesomeIcons.twitter),
                     ],
                   ),
                 ],
