@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ieee/Features/about/presntation/view/aboutScreen.dart';
+import 'package:ieee/Features/drawer/custom_drawer.dart';
 import 'package:ieee/core/AppColor/appcolor.dart';
 
 import 'widget/Nav_Widget.dart';
@@ -35,7 +36,28 @@ class _NavState extends State<Nav> {
               fit: BoxFit.cover,
             )),
         centerTitle: true,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Container(
+                width: 36,  
+                height: 36, 
+                child: const Icon(
+                  Icons.menu, 
+                  color: Colors.white,
+                  size: 45,
+                  
+                ),
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          },
+        ),
+      
       ),
+      drawer: const CustomDrawer(),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(left: 18, right: 18, bottom: 18),
         child: Container(
@@ -66,7 +88,7 @@ class _NavState extends State<Nav> {
                       _currentIndex = 0;
                     });
                   },
-                  child: Custom_Item(
+                  child: CustomItem(
                     title: 'Home',
                     icon: (Icons.home),
                     active: _currentIndex == 0 ? true : false,
@@ -81,7 +103,7 @@ class _NavState extends State<Nav> {
                       _currentIndex = 1;
                     });
                   },
-                  child: Custom_Item(
+                  child: CustomItem(
                     title: 'About',
                     icon: Icons.info_outline,
                     active: _currentIndex == 1 ? true : false,
@@ -96,7 +118,7 @@ class _NavState extends State<Nav> {
                       _currentIndex = 2;
                     });
                   },
-                  child: Custom_Item(
+                  child: CustomItem(
                     title: 'Team',
                     icon: Icons.group,
                     active: _currentIndex == 2 ? true : false,
@@ -112,10 +134,10 @@ class _NavState extends State<Nav> {
         onPageChanged: (index) {
           changeStateNavBar(index);
         },
-        children: [
-          const Center(child: Text('Screen1')),
-          const AboutScreen(),
-          const Center(child: Text('Screen3'))
+        children: const [
+          Center(child: Text('Screen1')),
+          AboutScreen(),
+          Center(child: Text('Screen3'))
         ],
       ),
     );

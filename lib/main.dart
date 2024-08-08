@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +12,7 @@ import 'Features/Department/presnation/view/Department_Screen.dart';
 void main() => runApp(
       DevicePreview(
         enabled: !kReleaseMode,
-        builder: (context) => IEEE(), // Wrap your app
+        builder: (context) => const IEEE(), // Wrap your app
       ),
     );
 
@@ -20,6 +22,6 @@ class IEEE extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Nav());
+    return const MaterialApp(home: Nav());
   }
 }

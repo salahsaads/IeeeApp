@@ -4,8 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../../core/AppColor/appcolor.dart';
 
-class Custom_Item extends StatelessWidget {
-  Custom_Item(
+// ignore: must_be_immutable
+class CustomItem extends StatelessWidget {
+  CustomItem(
       {super.key,
       required this.title,
       required this.icon,
