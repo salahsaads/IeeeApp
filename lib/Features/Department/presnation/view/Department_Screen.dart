@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ieee/Features/csAbout/csAbout.dart';
 import 'package:ieee/team/team_screen.dart';
 import '../../../../core/AppColor/appcolor.dart';
 
@@ -67,7 +68,7 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
             },
             children: [
               const Center(child: Text('Body1')),
-              const Center(child: Text('Body2')),
+              csAbout(),
               TeamScreen(
                 title_add: false,
               )
