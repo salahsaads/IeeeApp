@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-<<<<<<< HEAD
 import 'package:ieee/Features/csAbout/csAbout.dart';
-import 'package:ieee/team/team_screen.dart';
-=======
 import 'package:ieee/Features/team/team_screen.dart';
->>>>>>> f25fc5c7d014ee4cc1dc5c130e46993210870d11
 import '../../../../core/AppColor/appcolor.dart';
 import '../../../tracks/presntation/view/trackView.dart';
 
@@ -72,13 +68,10 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
               });
             },
             children: [
-<<<<<<< HEAD
               const Center(child: Text('Body1')),
               csAbout(),
-=======
               TrackView(),
               const Center(child: Text('Body2')),
->>>>>>> f25fc5c7d014ee4cc1dc5c130e46993210870d11
               TeamScreen(
                 title_add: false,
               )
