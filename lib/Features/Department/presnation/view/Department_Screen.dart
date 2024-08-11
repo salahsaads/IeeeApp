@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ieee/team/team_screen.dart';
+import 'package:ieee/Features/team/team_screen.dart';
 import '../../../../core/AppColor/appcolor.dart';
+import '../../../tracks/presntation/view/trackView.dart';
 
 class DepartmentScreen extends StatefulWidget {
   const DepartmentScreen({super.key});
@@ -66,7 +67,7 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
               });
             },
             children: [
-              const Center(child: Text('Body1')),
+              TrackView(),
               const Center(child: Text('Body2')),
               TeamScreen(
                 title_add: false,

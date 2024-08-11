@@ -3,8 +3,8 @@ import 'package:ieee/Features/about/presntation/view/aboutScreen.dart';
 import 'package:ieee/Features/drawer/custom_drawer.dart';
 import 'package:ieee/Features/home/presntation/view/HomeScreen.dart';
 import 'package:ieee/core/AppColor/appcolor.dart';
-import 'package:ieee/team/members_veiw.dart';
-import 'package:ieee/team/team_screen.dart';
+import 'package:ieee/Features/team/members_veiw.dart';
+import 'package:ieee/Features/team/team_screen.dart';
 
 import 'widget/Nav_Widget.dart';
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ieee/Features/about/presntation/view/widget/Title.dart';
 import 'package:ieee/core/AppColor/appcolor.dart';
-import 'package:ieee/team/members_veiw.dart';
+import 'package:ieee/Features/team/members_veiw.dart';
 
 class TeamScreen extends StatelessWidget {
   TeamScreen({super.key, required this.title_add});
@@ -18,7 +18,7 @@ class TeamScreen extends StatelessWidget {
               ))
             : SliverToBoxAdapter(
                 child: SizedBox(
-                height: 60,
+                height: 100,
               )),
         SliverList.builder(
             itemCount: 10,
