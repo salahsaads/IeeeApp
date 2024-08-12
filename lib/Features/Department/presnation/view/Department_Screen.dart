@@ -68,10 +68,8 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
               });
             },
             children: [
-              const Center(child: Text('Body1')),
-              csAbout(),
               TrackView(),
-              const Center(child: Text('Body2')),
+              csAbout(),
               TeamScreen(
                 title_add: false,
               )

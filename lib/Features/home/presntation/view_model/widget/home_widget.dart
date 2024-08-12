@@ -69,7 +69,7 @@ class _ActivityWidgetState extends State<ActivityWidget> {
                 widget.activity!.Description!,
                 style: TextStyle(
                   color: AppColor.SecColor,
-                  fontSize: 10,
+                  fontSize: 14,
                 ),
               )
             ],

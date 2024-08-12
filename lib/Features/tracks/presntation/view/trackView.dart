@@ -31,8 +31,7 @@ class TrackView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: CustomScrollView(
+    return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
           child: SizedBox(
@@ -51,6 +50,6 @@ class TrackView extends StatelessWidget {
               }),
         )
       ],
-    ));
+    );
   }
 }
